@@ -3,6 +3,8 @@ const express = require('express');
 const productRoute = require('./routes/product.route.js');
 const connectDB = require('./config/db.js');
 
+require('dotenv').config();
+
 //instances
 const app = express(); 
 

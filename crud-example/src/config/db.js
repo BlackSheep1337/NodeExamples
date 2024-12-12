@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const connectDB = () => {
   try {
     mongoose
-      .connect("mongodb+srv://admin:bRS4X0wfmxgXm7Gt@backenddb.vc1wt.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB")
+      .connect(`mongodb+srv://admin:${process.env.DB_CONNECTION}@backenddb.vc1wt.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB`)
       .then(() => {
         console.log("Connected to database!");
       })
